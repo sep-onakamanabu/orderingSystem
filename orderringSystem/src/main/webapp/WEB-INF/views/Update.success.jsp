@@ -11,16 +11,19 @@
 <title>更新完了画面</title>
 <script
  src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+ <script
+ src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
 </head>
-<body>
+<body  bgcolor="#FFD5EC">
 
      <div id = "com8"><h2>更新完了</h2></div>
 
 
-     <h4>更新が完了しました。内容をご確認ください。</h4>
+     <h4>更新が完了しました。発送準備ボタンより再度内容をご確認ください。</h4>
 
-
-     <input type="button" value="一覧画面へ戻る">
 
 
 

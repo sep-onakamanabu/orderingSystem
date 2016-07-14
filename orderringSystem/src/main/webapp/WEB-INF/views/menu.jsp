@@ -15,22 +15,22 @@
 <body bgcolor="#99ff99">
 
 
-  <form action ="http://localhost:8080/System/hoge.jsp" target="toppage2" method=post>
+  <form action ="http://localhost:8080/System/hoge.jsp" target="toppage2" method=POST>
    <br>
   <input type="submit" value="発注登録"><br> <br></form>
 
 
-  <form action ="http://localhost:8080/System/hoga.jsp" target="toppage2" method=post>
+  <form action ="http://localhost:8080/System/hoga.jsp" target="toppage2" method=POST>
    <br>
   <input type="submit" value="進捗確認"><br> <br></form>
 
 
-  <form action ="http://localhost:8080/System/partsod.jsp" target="toppage2" method=post>
+  <form action ="http://localhost:8080/System/partsod.jsp" target="toppage2" method=POST>
    <br>
   <input type="submit" value="部品注文"><br> <br></form>
 
 
-  <form action ="/System/Dispatch" target="toppage2" method=POST>
+  <form action ="/System/List Updates" target="toppage2" method=GET>
    <br>
   <input type="submit" value="発送準備"><br> <br></form>
 

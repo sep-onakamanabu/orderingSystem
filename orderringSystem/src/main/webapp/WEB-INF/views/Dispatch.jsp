@@ -19,41 +19,42 @@
 
 <body  bgcolor="#FFD5EC">
 
-<c:forEach items="${list}" var="obj">
-<form:form modelAttribute="FormModel">
 
+<form:form modelAttribute="FormModel" action="Registrationupdate" >
+<c:forEach items="${data}" var="obj">
 
 <div id="site-box2">
 
      <div id = "title2"><h2>発送指示確認画面</h2></div>
-     <div id = "com1"><h4>品番:</h4></div>
-     <div id = "com2"><h4>（入力された値が入ります）</h4></div>
+     <div id = "com1"><h4>商品番号:</h4></div>
+     <div id = "com2"><h4><c:out value="${obj.modelnumber}" /></h4></div>
      <div id = "com1"><h4>発注数:</h4></div>
-     <div id = "com2"><h4>（入力された値が入ります）</h4></div>
+     <div id = "com2"><h4><c:out value="${obj.ordernumber}" /></h4></div>
      <div id = "com1"><h4>郵便番号:</h4></div>
-     <div id = "com2"><h4>（入力された値が入ります）</h4></div>
+     <div id = "com2"><h4><c:out value="${obj.postalcode1}${obj.postalcode2}" /></h4></div>
      <div id = "com1"><h4>住所1(都道府県):</h4></div>
-     <div id = "com2"><h4>（入力された値が入ります）</h4></div>
+     <div id = "com2"><h4><c:out value="${obj.address1}" /></h4></div>
      <div id = "com1"><h4>住所2(市区町村、番地):</h4></div>
-     <div id = "com2"><h4>（入力された値が入ります）</h4></div>
+     <div id = "com2"><h4><c:out value="${obj.address2}" /></h4></div>
      <div id = "com1"><h4>住所3(建物名、アパート名など):</h4></div>
-     <div id = "com2"><h4>（入力された値が入ります）</h4></div>
+     <div id = "com2"><h4><c:out value="${obj.address3}" /></h4></div>
      <div id = "com1"><h4>電話番号:</h4></div>
-     <div id = "com2"><h4>（入力された値が入ります）</h4></div>
-     <div id = "com1"><h4>発注者:</h4></div>
-     <div id = "com2"><h4>（入力された値が入ります）</h4></div>
+     <div id = "com2"><h4><c:out value="${obj.tel}" /></h4></div>
+     <div id = "com1"><h4>発注登録者:</h4></div>
+     <div id = "com2"><h4><c:out value="${obj.ordername}" /></h4></div>
 
-<input type="hidden" name="id" value="${id}">
+     <input type="hidden" name="id" value="${obj.orderid}">
 
-     <div id = "com3"><input type="submit" value="発送開始"></div>
+     <div id = "com3"><input type="submit" name="conp" value="発送開始"></div>
      <div id = "com4"><input type="button" value="発注確認"></div>
      <div id = "com4"><input type="button" value="進捗確認"></div>
-     <div id = "com4"><input type="button" value="発送内容変更"></div>
+     <div id = "com4"><input type="submit" name="conf" value="発送内容変更"></div>
+
 </div>
 
-
-</form:form>
 </c:forEach>
+</form:form>
+
 
 </body>
 </html>
