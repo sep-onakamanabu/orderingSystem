@@ -46,8 +46,6 @@
      <input type="hidden" name="id" value="${obj.orderid}">
 
      <div id = "com3"><input type="submit" name="conp" value="発送開始"></div>
-     <div id = "com4"><input type="button" value="発注確認"></div>
-     <div id = "com4"><input type="button" value="進捗確認"></div>
      <div id = "com4"><input type="submit" name="conf" value="発送内容変更"></div>
 
 </div>

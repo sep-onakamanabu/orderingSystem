@@ -3,6 +3,7 @@ package Printer.ordering.System;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpSession;
 
@@ -105,6 +106,43 @@ public class HomeController {
        String address2 = fm.getaddress2();
        String address3 = fm.getaddress3();
        String tel = fm.getTel();
+
+
+       if (quiry == "" || postalcode1 == "" || postalcode2 == ""|| address1 == ""|| address2 == ""|| address3 == ""|| tel == "" ) {
+
+
+              return "toppage2";
+
+       }else{
+
+          }if(!Pattern.compile("\\d{3}").matcher(postalcode1).matches()) {
+
+          }if(!Pattern.compile("\\d{4}").matcher(postalcode2).matches()) {
+
+              return "toppage2";
+
+          }if(!Pattern.compile("^[-a-zA-Z0-9ぁ-ゑァ-ヶ一-龠 　]{1,255}$").matcher(address1).matches()) {
+
+              return "toppage2";
+
+          }if(!Pattern.compile("^[-a-zA-Zぁ-ゑァ-ヶ一-龠 　]{1,255}$").matcher(address2).matches()) {
+
+              return "toppage2";
+
+          }if(!Pattern.compile("^[-a-zA-Zぁ-ゑァ-ヶ一-龠 　]{1,255}$").matcher(address3).matches()) {
+
+              return "toppage2";
+
+
+          }if(!Pattern.compile("\\d{2,5}-\\d{1,4}-\\d{4}").matcher(tel).matches()) {
+
+              return "toppage2";
+
+
+       }else{
+
+
+
        jdbcTemplate.execute(
                "update ordertb set postalcode1='"+ postalcode1 +"', postalcode2='"+ postalcode2 +"',"
                        + "address1='"+ address1 +"',address2='"+ address2 +"',address3='"+address3+"',"
@@ -112,6 +150,6 @@ public class HomeController {
        return "Update.success";
    }
 
-
+   }
 
  }
